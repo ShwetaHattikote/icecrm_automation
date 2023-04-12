@@ -18,8 +18,8 @@ public class FindBrokenImages {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		WebDriverManager.chromedriver().setup();
 		ChromeOptions option = new ChromeOptions();
+		WebDriverManager.chromedriver().setup();		
 		WebDriver driver =new ChromeDriver(option);
 		option.addArguments("start-maximized");
 		option.addArguments("--remote-allow-origins=*");
