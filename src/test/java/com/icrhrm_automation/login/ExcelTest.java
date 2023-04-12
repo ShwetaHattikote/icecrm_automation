@@ -1,8 +1,8 @@
-package com.icrhrm1_automation.login;
+package com.icrhrm_automation.login;
 
 import org.testng.annotations.Test;
 
-import com.icrhrm1_automation.utility.ExcelUtil;
+import com.icrhrm_automation.utility.ExcelUtil;
 
 import org.testng.annotations.DataProvider;
 

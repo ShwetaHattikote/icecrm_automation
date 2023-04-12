@@ -14,7 +14,12 @@ public class IcehrmAssignment {
      while (true) { // while loop to jump on year
 			if (year.equals(driver.findElement(By.xpath("//span[@class='ant-picker-super-prev-icon']")).getText())) {
 				while (true) { // while loop to jump on expected month
-					if (month.equals(driver.findElement(By.xpath("//span[@class=\'ant-picker-prev-icon\']")).getText())) {
+					int monthValue = LocalDateTime.now().getMonthValue();
+					Integer actualmonth = Integer.valueOf(month);
+					if(monthValue<actualmonth) {
+				driver.findElement(By.xpath("//span[@class=\'ant-picker-prev-icon\']")).getText();
+				}else {//write the logic for to compare month and according to that click the arrow forword or backword
+					driver.findElement(By.className("ant-picker-header-next-btn")).click();
 						while (true) {// while loop to jump on expected day
 							String day1 = String.valueOf(day);
 				List<WebElement> element = driver.findElements(By.xpath("//button[@class='ant-picker-cell-inner']"));//we r getting 42 results
@@ -26,10 +31,9 @@ public class IcehrmAssignment {
 								}
 							}
 						}
-					} else {//write the logic for to compare month and according to that click the arrow forword or backword
-						driver.findElement(By.className("ant-picker-header-next-btn")).click();
 					}
-				}
+					}
+				
 			} else {
 				driver.findElement(By.className("ant-picker-super-prev-icon")).click();
 			}

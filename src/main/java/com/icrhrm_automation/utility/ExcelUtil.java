@@ -1,4 +1,4 @@
-package com.icrhrm1_automation.utility;
+package com.icrhrm_automation.utility;
 
 import java.io.FileInputStream;
 import java.io.IOException;

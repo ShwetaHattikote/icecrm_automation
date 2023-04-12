@@ -1,9 +1,24 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 package com.icrhrm1_automation.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.icrhrm1_automation.utility.BaseClass;
+import com.icrhrm_automation.utility.BaseClass;
 
 public class LoginPage extends BaseClass { 
 	//Declare all the Locators 

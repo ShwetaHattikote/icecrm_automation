@@ -8,8 +8,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
-public class DatePickerExample {
+public class DatePickerExample  {
 	static WebDriver driver;
 	
 	public static void selectDayFromCalender(int futureDay) throws InterruptedException {
@@ -33,8 +34,8 @@ public class DatePickerExample {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.edge.driver", "edgedriver.exe");
+		driver = new EdgeDriver();
 		//String date5 = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-mm-yyyy HH:mm:ss"));
 		   //System.out.print(date5);
 		driver.navigate().to("https:www.redbus.in");

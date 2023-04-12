@@ -1,8 +1,8 @@
-package com.icrhrm1_automation.login;
+package com.icrhrm_automation.login;
 
 import org.testng.annotations.Test;
 
-import com.icrhrm1_automation.utility.BaseClass;
+import com.icrhrm_automation.utility.BaseClass;
 
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.By;
@@ -12,7 +12,7 @@ public class IcrHrmLoginTestCase extends BaseClass {
 	@BeforeClass
 	public void beforeClass() {
 		System.out.println("Here we are launching Browser and Navigate To IcrHRM URL ");
-		luanchBrowser("edge");
+		launchBrowser("edge");
 		driver.navigate().to("https://cybersuccess.icehrm.com/");
 		System.out.println(driver.getTitle());
 	}

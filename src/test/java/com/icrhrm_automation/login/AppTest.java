@@ -1,4 +1,4 @@
-package com.icrhrm1_automation.login;
+package com.icrhrm_automation.login;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

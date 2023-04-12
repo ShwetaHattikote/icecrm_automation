@@ -2,7 +2,7 @@ package com.orangehrm_automation.pages;
 
 import org.openqa.selenium.By;
 
-import com.icrhrm1_automation.utility.BaseClass;
+import com.icrhrm_automation.utility.BaseClass;
 
 public class MyinfoPage extends BaseClass {
 
