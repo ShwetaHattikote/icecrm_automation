@@ -20,9 +20,9 @@ public class ExtentReportManager {
 	
 
 	public static void setReportDetails() {
-		LocalDateTime dateTime = LocalDateTime.now();
-		String currentDateTime = dateTime.format(DateTimeFormatter.ofPattern("dd_mm_yyyy_HH_mm"));
-		reportPath = System.getProperty("user.dir") + "/reports/" + "report_" + currentDateTime;
+		//LocalDateTime dateTime = LocalDateTime.now();
+		//String currentDateTime = dateTime.format(DateTimeFormatter.ofPattern("dd_mm_yyyy_HH_mm"));
+		reportPath = System.getProperty("user.dir") + "/reports/"; //+ "report_" + currentDateTime;
 		System.out.println("ReportPath is " + reportPath);
 		File file = new File(reportPath);
 		if (!file.exists()) {
