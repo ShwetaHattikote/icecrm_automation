@@ -1,5 +1,5 @@
 package com.icrhrm_automation.utility;
-import org.testng.ISuite;
+
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -9,19 +9,16 @@ public class TestListners implements ITestListener, ISuiteListener {
 
 //	String reportPath;
 //	ExtentReports extentReporter;
-
-	@Override
-	public void onStart(ISuite suite) { // ISuiteListener
-		System.out.println("This is onStart of ISuite from TestListners");
-	}
-
-	@Override
-	public void onFinish(ISuite suite) { // ISuiteListener
-		System.out.println("This is onFinish of ISuite from TestListners");
-		//extentReporter.flush();
-		ExtentTestManager.endTest();
-
-	}
+	/*
+	 * @Override public void onStart(ISuite suite) { // ISuiteListener
+	 * System.out.println("This is onStart of ISuite from TestListners"); }
+	 * 
+	 * @Override public void onFinish(ISuite suite) { // ISuiteListener
+	 * System.out.println("This is onFinish of ISuite from TestListners");
+	 * //extentReporter.flush(); ExtentTestManager.endTest();
+	 * 
+	 * }
+	 */
 
 	@Override
 	public void onStart(ITestContext context) {
@@ -31,6 +28,7 @@ public class TestListners implements ITestListener, ISuiteListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		System.out.println("This is onFinish of ITestContest from TestListners");
+		ExtentTestManager.endTest();
 	}
 
 	@Override
