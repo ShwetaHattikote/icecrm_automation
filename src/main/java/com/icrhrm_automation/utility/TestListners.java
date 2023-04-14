@@ -1,5 +1,4 @@
 package com.icrhrm_automation.utility;
-
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
