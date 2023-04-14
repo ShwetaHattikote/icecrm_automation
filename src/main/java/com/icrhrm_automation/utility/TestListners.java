@@ -1,11 +1,10 @@
 package com.icrhrm_automation.utility;
 
-import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class TestListners implements ITestListener, ISuiteListener {
+public class TestListners implements ITestListener{
 
 //	String reportPath;
 //	ExtentReports extentReporter;
