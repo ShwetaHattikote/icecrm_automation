@@ -23,7 +23,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	protected  WebDriver driver;
+	protected WebDriver driver;
 
 	public void launchBrowser(String browser) {
 		switch (browser) {
@@ -98,23 +98,16 @@ public class BaseClass {
 	}
 
 	public void enterText(By by, String text) {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			wait.until(ExpectedConditions.presenceOfElementLocated(by));
-			driver.findElement(by).sendKeys(text);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.presenceOfElementLocated(by));
+		driver.findElement(by).sendKeys(text);
+
 	}
 
 	public void click(By by) {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			wait.until(ExpectedConditions.presenceOfElementLocated(by));
-			driver.findElement(by).click();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.presenceOfElementLocated(by));
+		driver.findElement(by).click();
 	}
 
 	public void selectBirthDayFromCalender(int day, String month, String year) {

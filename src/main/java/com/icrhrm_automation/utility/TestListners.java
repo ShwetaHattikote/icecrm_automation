@@ -20,6 +20,8 @@ public class TestListners implements ITestListener, ISuiteListener {
 	public void onFinish(ISuite suite) { // ISuiteListener
 		System.out.println("This is onFinish of ISuite from TestListners");
 		//extentReporter.flush();
+		ExtentTestManager.endTest();
+
 	}
 
 	@Override
@@ -30,7 +32,6 @@ public class TestListners implements ITestListener, ISuiteListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		System.out.println("This is onFinish of ITestContest from TestListners");
-		ExtentTestManager.endTest();
 	}
 
 	@Override
